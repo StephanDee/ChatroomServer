@@ -1,0 +1,22 @@
+{
+  "name": "chatroomserver",
+  "version": "0.0.1-alpha",
+  "description": "The backend of the ChatroomApp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanDee/ChatroomServer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StephanDee/ChatroomServer/issues"
+  },
+  "homepage": "https://github.com/StephanDee/ChatroomServer#readme",
+  "dependencies": {
+    "ws": "^7.1.0"
+  }
+}
