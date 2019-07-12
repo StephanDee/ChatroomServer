@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/StephanDee/ChatroomServer.git"
   },
-  "author": "",
+  "author": "Stephan Dünkel",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/StephanDee/ChatroomServer/issues"
