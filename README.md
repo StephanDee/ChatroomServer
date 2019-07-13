@@ -13,4 +13,4 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the server.
+This command will start the server.
