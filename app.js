@@ -1,3 +1,11 @@
+/**
+ * @Author: Stephan Dünkel 
+ * @Date: 2019-07-13 16:07:51 
+ * @Last Modified by: Stephan Dünkel
+ * @Last Modified time: 2019-07-13 16:08:36
+ * 
+ * The WebSocketServer Application. 
+ */
 const WebSocketServer = require("ws").Server;
 const wss = new WebSocketServer({ port: 8080 });
 
@@ -14,8 +22,12 @@ wss.on("connection", connection => {
 
   // Message listener
   connection.on("message", message => {
-    const data = JSON.parse(message);
-    broadcast(data);
+    try {
+      const data = JSON.parse(message);
+      broadcast(data);
+    } catch (error) {
+      console.log(error);
+    }
   });
 });
 
@@ -25,8 +37,12 @@ wss.on("connection", connection => {
  * @param message The message {username, message}
  */
 function broadcast(message) {
-  const data = JSON.stringify(message);
-  clients.forEach(client => client.send(data));
+  try {
+    const data = JSON.stringify(message);
+    clients.forEach(client => client.send(data));
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // The chatroom wont close with this workaround
